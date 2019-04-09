@@ -9,7 +9,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "barryvdh/laravel-debugbar": "^3.2",
         "fideloper/proxy": "^4.0",
+        "gdevilbat/spardacmscore-module": "dev-master",
+        "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "nwidart/laravel-modules": "^4.1"
@@ -22,6 +25,12 @@
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^7.5"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://gitlab.com/maldinuribrahim/spardacms-core"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -30,7 +39,8 @@
     "extra": {
         "laravel": {
             "dont-discover": []
-        }
+        },
+        "module-dir": "vendor/gdevilbat"
     },
     "autoload": {
         "psr-4": {
