@@ -135,7 +135,7 @@ return [
     'scan' => [
         'enabled' => true,
         'paths' => [
-            base_path('vendor/gdevilbat/*/*/*/*'),
+            base_path('vendor/gdevilbat'),
         ],
     ],
     /*
