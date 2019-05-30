@@ -14,6 +14,7 @@
         "gdevilbat/sparda-cms-core-module": "^5.7",
         "gdevilbat/sparda-cms-role-module": "^1.0",
         "gdevilbat/sparda-cms-account-module": "^1.0",
+        "gdevilbat/sparda-cms-user-module": "^1.0",
         "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
@@ -39,6 +40,10 @@
         {
             "type": "git",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-account"
+        },
+        {
+            "type": "git",
+            "url": "https://gitlab.com/maldinuribrahim/spardacms-user"
         }
     ],
     "config": {
