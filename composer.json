@@ -11,10 +11,10 @@
         "php": "^7.1.3",
         "barryvdh/laravel-debugbar": "^3.2",
         "fideloper/proxy": "^4.0",
-        "gdevilbat/sparda-cms-core-module": "^5.7",
-        "gdevilbat/sparda-cms-role-module": "^1.0",
-        "gdevilbat/sparda-cms-account-module": "^1.0",
-        "gdevilbat/sparda-cms-user-module": "^1.0",
+        "gdevilbat/sparda-cms-core-module": "^5.7.5",
+        "gdevilbat/sparda-cms-role-module": "^1.3",
+        "gdevilbat/sparda-cms-account-module": "^1.2",
+        "gdevilbat/sparda-cms-user-module": "^1.2",
         "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
@@ -30,19 +30,19 @@
     },
     "repositories": [
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-core"
         },
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-role"
         },
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-account"
         },
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-user"
         }
     ],
