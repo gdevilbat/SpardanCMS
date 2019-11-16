@@ -31,19 +31,19 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://gitlab.com/maldinuribrahim/spardacms-core"
+            "url": "git@gitlab.com:maldinuribrahim/spardacms-core.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/maldinuribrahim/spardacms-role"
+            "url": "git@gitlab.com:maldinuribrahim/spardacms-role"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/maldinuribrahim/spardacms-account"
+            "url": "git@gitlab.com:maldinuribrahim/spardacms-account"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/maldinuribrahim/spardacms-user"
+            "url": "git@gitlab.com:maldinuribrahim/spardacms-user"
         }
     ],
     "config": {
