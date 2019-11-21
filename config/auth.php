@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => \Gdevilbat\SpardaCMS\Modules\Core\Entities\User::class,
         ],
 
         // 'users' => [
