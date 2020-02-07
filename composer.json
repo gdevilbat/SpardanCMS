@@ -30,18 +30,22 @@
     },
     "repositories": [
         {
+            "name": "gdevilbat/sparda-cms-core-module",
             "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-core.git"
         },
         {
+            "name": "gdevilbat/sparda-cms-role-module",
             "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-role"
         },
         {
+            "name": "gdevilbat/sparda-cms-account-module",
             "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-account"
         },
         {
+            "name": "gdevilbat/sparda-cms-user-module",
             "type": "vcs",
             "url": "https://gitlab.com/maldinuribrahim/spardacms-user"
         }
@@ -59,7 +63,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Modules\\": "Modules/"
         },
         "classmap": [
             "database/seeds",
