@@ -77,7 +77,7 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        'assets' => public_path('Modules'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
