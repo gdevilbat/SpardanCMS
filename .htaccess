@@ -23,6 +23,12 @@
         Allow From All
     </FilesMatch>
 
+    #RewriteCond %{HTTP_HOST} !^(www\.|mail\.)
+    #RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
+
+    #RewriteCond %{HTTPS} off
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
     # Extra Security Headers
     <IfModule mod_headers.c>
       Header set X-XSS-Protection "1; mode=block"
