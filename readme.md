@@ -1,66 +1,68 @@
-# InstaLiveWeb
+# SpardaCMS
 
-> InstaLiveWeb is a Python Flask webapp that create a Instagram Live and provide you a rtmp server and stream key to streaming using sofwares like OBS-Studio.
+> SpardaCMS is a Modular CMS for Buiding a Websites. You can add or make you own module base on your requirement. Some of built-in package will saving your time :)
 
-![login page v1](login.png)
+![login page v1](public/images/login.png)
 
-![dashboard v1](dashboard.png)
+![dashboard v1](public/images/dashboard.png)
 
 ## Features
 
-- Start and Stop Broadcast
-- Refresh Stream Key
-- Display Viewers
-- Display Live Comments
+- Account Profile
+- User & Role
+- Module Authorization
+- Taxomies
+- Page
+- Post
+- Ecommerce Integration (Tokopedia & Shoppee Syncronize Data)
+- Datatable
+- Filemanager
 
 ## Upcoming Features
 
-- [ ] Storing and Loading Cookies
-- [ ] Proxy Support
-- [ ] Multi Accounts
-- [ ] ??? (You decide by creating an Issues)
+- [ ] Membership
+- [ ] Upload to Marketplace from Ecommerce Page
 
 ## Installation
 
 #### > Clone this repo
 
 ```sh
-git clone https://github.com/RaihanStark/instaliveweb.git
-cd instaliveweb/
-```
-
-#### > Installing and activating the virtual environment
-
-```sh
-python -m venv env
-env\Scripts\activate.bat
+composer create-project gdevilbat/spardacms {Aplication Name}
+cd {Aplication Name}/
 ```
 
 #### > Installing Packages
 
 ```sh
-pip install -r requirements.txt
+COMPOSER_MEMORY_LIMIT=-1 composer update -vv
+```
+
+#### > Installing and activating the virtual environment
+
+```sh
+cp .env .example
+nano .env
+```
+
+- Set Database Name
+- Set User & Pass for For Database
+
+#### > Installing Factory Database and Seeder
+
+```sh
+php artisan migrate
+php artisan module:sparda-seed
 ```
 
 ## Running on Local
 
 ```sh
-set FLASK_ENV=development
-flask run
+http://localhost/{Aplication_Name}/control/auth
 ```
 
 ## Author
 
-##### HarryPython - [itsagramlive](https://github.com/harrypython/itsagramlive) ( CLI Version )
-
-##### Raihan Yudo Saputra - [instaliveweb](https://github.com/RaihanStark/instaliveweb) ( Web Version - this repo)
+##### Muhammad Aldi Nur Ibrahim - [SpardaCMS](https://github.com/gdevilbat/SpardanCMS) ( Web Version - this repo)
 
 > Distributed under the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) license. See `LICENSE` for more information.
-
-## Contributing
-
-1. Fork it (<https://github.com/RaihanStark/instaliveweb/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
