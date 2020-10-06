@@ -61,6 +61,58 @@ php artisan module:sparda-seed
 http://localhost/{Aplication_Name}/control/auth
 ```
 
+## Installing New Module
+
+#### > Create Module
+
+```sh
+php artisan module:make {Module Name}
+```
+
+#### > Extend Controller From Gdevilbat Core Controller
+
+- Open Controller Folder
+- Open Controller File
+- Use class Gdevilbat Core Controller
+
+![extend controller v1](public/images/login_controller.png)
+
+#### > Register Controller to Route
+
+- Open web route file
+- Use prefix control
+- Use midleware core.auth and core.menu
+
+![route controller v1](public/images/route.png)
+
+#### > Parsing Variable into Blade
+
+- use $this->data to blade view function
+
+![parsing variable](public/images/parsing_variable.png)
+
+- open folder resources > views > admin > content
+- make blade file and extend parent template
+- Fill title_dashboard, breadcumm and content section
+- You can add your own assets on page_level_css and page_level_js  section
+
+![content_folder](public/images/content_folder.png)
+
+![pcontent](public/images/content.png)
+
+#### > Register Sidebar Menu
+
+- open folder resources > views > admin > content
+- make sidebar.blade.php file
+
+![sidebar_folder](public/images/sidebar_folder.png)
+
+![make sidebar](public/images/sidebar.png)
+
+- You will have your Module menu On Sidebar
+
+![success_sidebar](public/images/success_sidebar.png)
+
 ## Author
 
 ##### Muhammad Aldi Nur Ibrahim - [SpardaCMS](https://github.com/gdevilbat/SpardanCMS) ( Web Version - this repo)
