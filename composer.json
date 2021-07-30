@@ -15,7 +15,6 @@
         "gdevilbat/sparda-cms-core-module": "~5.8",
         "gdevilbat/sparda-cms-user-module": "^3.0",
         "jeremykenedy/laravel-exception-notifier": "^1.2",
-        "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "nwidart/laravel-modules": "^5.0"
