@@ -1,0 +1,29 @@
+# Version
+version: '3.8'
+
+services:
+  web:
+    container_name: web_spardacms
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+    networks:
+      - spardacms_network
+
+  app:
+    container_name: app_spardacms
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    volumes:
+      - ./:/var/www
+    networks:
+      - spardacms_network
+  
+networks:
+  spardacms_network:
+    name: spardacms_network
