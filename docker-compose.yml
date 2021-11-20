@@ -2,17 +2,19 @@
 version: '3.8'
 
 services:
-  # web:
-  #   container_name: web_spardacms
-  #   build:
-  #     context: ./
-  #     dockerfile: docker/web.dockerfile
-  #   ports:
-  #     - "8080:80"
-  #   depends_on:
-  #     - app
-  #   networks:
-  #     - spardacms_network
+  web:
+    container_name: web_spardacms
+    build:
+      context: ./
+      dockerfile: docker/web.dockerfile
+    ports:
+      - "8081:80"
+    depends_on:
+      - fpm
+    networks:
+      - spardacms_network
+    volumes:
+      - ./:/var/www
 
   app:
     container_name: app_spardacms
@@ -23,8 +25,18 @@ services:
         - "8080:80"
     volumes:
       - ./:/var/www/html
+    depends_on:
+      - fpm
     networks:
       - spardacms_network
+
+  fpm:
+    container_name: fpm_spardacms
+    image: php:7.3-fpm
+    networks:
+      - spardacms_network
+    volumes:
+      - ./:/var/www
   
 networks:
   spardacms_network:
