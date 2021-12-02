@@ -21,6 +21,7 @@ services:
     build:
       context: ./
       dockerfile: docker/app.dockerfile
+    restart: unless-stopped
     ports:
         - "127.0.0.3:80:80"
     depends_on:
@@ -35,10 +36,12 @@ services:
     build:
       context: ./
       dockerfile: docker/fpm.dockerfile
+    restart: unless-stopped
     networks:
       - spardacms_network
     volumes:
       - ./:/var/www/html
+      - ./docker/auth.json:/root/.config/composer/auth.json
   
 networks:
   spardacms_network:

@@ -1,7 +1,5 @@
 FROM php:7.3-fpm
 
-RUN apt update && apt install -y software-properties-common
-
 RUN apt update && apt  install -y libpng-dev libjpeg-dev libzip-dev libfreetype6-dev \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath zip
 
