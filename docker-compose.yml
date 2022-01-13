@@ -42,6 +42,19 @@ services:
     volumes:
       - ./:/var/www/html
       - ./docker/auth.json:/root/.config/composer/auth.json
+
+  selenium:
+    container_name: selenium_spardacms
+    image: selenium/standalone-chrome:latest
+    restart: unless-stopped
+    depends_on:
+      - app
+    links:
+      - app:sdnet.test
+    networks:
+      - spardacms_network
+    volumes:
+      - /dev/shm:/dev/shm
   
 networks:
   spardacms_network:
